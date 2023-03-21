@@ -16,5 +16,5 @@ foreach ($snapshot in $snapshots) {
   
 }
 
-# Displaying total GB deleted from snapshosts removed
+# Displaying total GB deleted from snapshosts removed 
 Write-Output "`n `n Total GB to be deleted from snapshots is $total GB"
