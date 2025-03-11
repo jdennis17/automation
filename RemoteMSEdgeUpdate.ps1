@@ -3,7 +3,7 @@
 import-module ActiveDirectory
 
 # Get list of computers to query - exclude server where script is running from 
-$computers = Get-ADComputer -Filter * | Where-Object { $_.Enabled -eq $true -AND $_.Name -notlike 'server01' -AND $_.Name -notlike 'dc1vwdebscgrp01' -AND $_.Name -notlike 'dc1vwdebscgrp02'} | Select-Object -ExpandProperty Name
+$computers = Get-ADComputer -Filter * | Where-Object { $_.Enabled -eq $true -AND $_.Name -notlike 'server01' -AND $_.Name -notlike 'server02' -AND $_.Name -notlike 'dc1vwdebscgrp02'} | Select-Object -ExpandProperty Name
 
 # Initialize empty array which will hold the results of the remote commands executed for each server
 $allServerInfo = @()
